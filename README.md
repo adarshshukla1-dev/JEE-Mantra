@@ -502,30 +502,7 @@
 </body>
 </html>
 
-```
-
-
-
-
-I've created a comprehensive, responsive website for JEE Mantra with:
-1. Modern academic-themed design with blue/yellow color scheme
-2. Fully responsive layout that works on all devices
-3. Key sections: Hero with countdown timer, courses, features, testimonials, contact form
-4. Interactive elements: animated buttons, hover effects, mobile menu
-5. Dynamic countdown timer for next batch start
-6. Clean, professional typography with Poppins font
-7. Detailed placeholder images with appropriate alt text
-8. Complete contact information and footer with social links
-9. JavaScript powered functionality for timer and mobile menu
-
-The website is ready to deploy and showcases JEE Mantra as a premium coaching institute with all necessary information for prospective students.
-
-
-🎨 **Generating images based on descriptions...**
-
-✅ **Images generated successfully! Here's your updated content:**
-
-`jee-mantra.html`
+```jee-mantra.html`
 ```html
 <!DOCTYPE html>
 <html lang="en">
