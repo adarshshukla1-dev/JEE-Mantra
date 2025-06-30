@@ -1,75 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Login - JEE Mantra</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="flex items-center justify-center h-screen bg-gray-100">
-  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
-    <h2 class="text-2xl font-bold mb-24 text-center">JEE Mantra</h2>
-    </head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="Screenshot 2024-10-22 114039.png" alt="JEE Mantra logo with book and graduation cap icon" class="h-10">
-                <span class="ml-3 text-xl font-bold text-blue-800">JEE Mantra</span>
-            </div>
-    <h2 class="text-2xl font-bold mb-6 text-center">Student Login</h2>
-    <form id="login-form">
-      <input id="email" class="w-full p-2 mb-4 border rounded" type="email" placeholder="Email" required />
-      <input id="password" class="w-full p-2 mb-4 border rounded" type="password" placeholder="Password" required />
-      <button class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600" type="submit">Login</button>
-    </form>
-    <p id="message" class="text-red-500 text-sm mt-4 text-center"></p>
-  </div>
-
-  <!-- Firebase Scripts -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
-    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
-
-    const firebaseConfig = {
-      apiKey: "// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBR3EM1I-xJ6outpxyHgPAQ7QXs7Byn_Pk",
-  authDomain: "jee-mantra-b9902.firebaseapp.com",
-  projectId: "jee-mantra-b9902",
-  storageBucket: "jee-mantra-b9902.firebasestorage.app",
-  messagingSenderId: "340915085668",
-  appId: "1:340915085668:web:8a37b99bdc0d83e56ada71",
-  measurementId: "G-7835N9CWDH"
-};",
-      authDomain: "YOUR_AUTH_DOMAIN",
-      projectId: "jee-mantra-b9902",
-      appId: "1:340915085668:web:8a37b99bdc0d83e56ada71"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-
-    const form = document.getElementById("login-form");
-    const message = document.getElementById("message");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
-      try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        message.textContent = "Login successful!";
-        message.classList.remove("text-red-500");
-        message.classList.add("text-green-500");
-        // Redirect to dashboard or home page
-        window.location.href = "/dashboard.html";
-      } catch (error) {
-        message.textContent = "Login failed: " + error.message;
-      }
-    });
-  </script>
+</body>
+</html>
+=======
 </body>
 </html>
 
+<!-- New login.html file content -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JEE Mantra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .login-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+    </style>
+</head>
+<body class="font-['Poppins']">
+    <div class="min-h-screen flex items-center justify-center login-gradient">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+            <div class="text-center mb-8">
+                <img src="https://placehold.co/150x50?text=JEE+Mantra" alt="JEE Mantra Logo" class="mx-auto h-12">
+                <h2 class="text-2xl font-bold text-gray-800 mt-4">Student Login</h2>
+            </div>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        Email Address
+                    </label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                           id="email" type="email" placeholder="student@example.com">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        Password
+                    </label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                           id="password" type="password" placeholder="••••••••">
+                </div>
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <input id="remember-me" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                        <label for="remember-me" class="ml-2 block text-sm text-gray-700">
+                            Remember me
+                        </label>
+                    </div>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-500">
+                        Forgot password?
+                    </a>
+                </div>
+                <button class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300" type="button">
+                    Login
+                </button>
+                <div class="mt-4 text-center">
+                    <p class="text-gray-600 text-sm">Don't have an account? 
+                        <a href="#" class="text-blue-600 hover:text-blue-500 font-medium">Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
